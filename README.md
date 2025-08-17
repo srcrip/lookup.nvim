@@ -37,7 +37,7 @@ language I write the most of, Elixir, cannot jump to certain things (at time of 
 
 ```lua
 {
-  'your-username/lookup.nvim',
+  'srcrip/lookup.nvim',
   dependencies = {
     -- whichever picker you like
     'ibhagwan/fzf-lua',
