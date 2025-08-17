@@ -74,13 +74,13 @@ end
 function M.show_picker(matches)
   local picker_name = M.config.picker
   local picker_module = 'lookup.pickers.' .. picker_name
-  
+
   local ok, picker = pcall(require, picker_module)
   if not ok then
     -- Fallback to builtin picker
     picker = require('lookup.pickers.builtin')
   end
-  
+
   picker.show_matches(matches)
 end
 

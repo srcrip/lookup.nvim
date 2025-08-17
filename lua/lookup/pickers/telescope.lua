@@ -36,7 +36,7 @@ function M.show_matches(matches)
       actions.select_default:replace(function()
         local selection = action_state.get_selected_entry()
         actions.close(prompt_bufnr)
-        
+
         if selection then
           local match = selection.value
           vim.cmd('edit ' .. match.file)
@@ -49,3 +49,4 @@ function M.show_matches(matches)
 end
 
 return M
+

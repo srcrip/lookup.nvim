@@ -20,10 +20,10 @@ function M.show_matches(matches)
         if not selected or #selected == 0 then
           return
         end
-        
+
         local entry = selected[1]
         local file, line_num, col_num = entry:match('^([^:]+):(%d+):(%d+):')
-        
+
         if file and line_num then
           vim.cmd('edit ' .. file)
           vim.api.nvim_win_set_cursor(0, { tonumber(line_num), tonumber(col_num) or 0 })
@@ -34,3 +34,4 @@ function M.show_matches(matches)
 end
 
 return M
+

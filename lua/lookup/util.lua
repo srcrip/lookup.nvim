@@ -36,4 +36,3 @@ function M.find_definitions_with_patterns(word, patterns, rg_type)
 end
 
 return M
-

@@ -45,3 +45,4 @@ function M.find_definitions(word)
 end
 
 return M
+
