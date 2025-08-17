@@ -78,3 +78,4 @@ vim.keymap.set('n', 'gd', require('lookup').lookup_definition, { desc = 'Go to d
 - [ ] Ensure visual mode support
 - [ ] Add unit tests
 - [ ] Warn when LSP isn't available yet (it's really annoying that LSP/Neovim does not do this automatically)
+- [ ] Enable configuration of searched directories (right now the plugin won't search stuff that's often hidden/gitignored like `node_modules` or other dependencies, but you may want to be able to jump to those))
