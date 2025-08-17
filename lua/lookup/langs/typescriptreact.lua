@@ -1,0 +1,1 @@
+return require('lookup.langs.typescript')

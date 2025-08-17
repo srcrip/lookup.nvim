@@ -1,5 +1,7 @@
 local M = {}
 
+M.rg_type = 'elixir'
+
 M.patterns = {
   {
     type = 'function',
@@ -24,34 +26,7 @@ M.patterns = {
 }
 
 function M.find_definitions(word)
-  local matches = {}
-  local cwd = vim.fn.getcwd()
-
-  for _, pattern_def in ipairs(M.patterns) do
-    local pattern = pattern_def.pattern:gsub('%%s', word)
-
-    local cmd = string.format("rg -n '%s' --type elixir %s", pattern, cwd)
-    local handle = io.popen(cmd)
-
-    if handle then
-      for line in handle:lines() do
-        local file, line_num, content = line:match('^([^:]+):(%d+):(.*)$')
-        if file and line_num and content then
-          table.insert(matches, {
-            file = file,
-            line = tonumber(line_num),
-            col = 0,
-            content = vim.trim(content),
-            type = pattern_def.type,
-            description = pattern_def.description
-          })
-        end
-      end
-      handle:close()
-    end
-  end
-
-  return matches
+  return require('lookup.util').find_definitions_with_patterns(word, M.patterns, M.rg_type)
 end
 
 return M

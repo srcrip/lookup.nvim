@@ -69,4 +69,3 @@ function M.fallback_picker(matches)
 end
 
 return M
-
