@@ -28,8 +28,14 @@ language I write the most of, Elixir, cannot jump to certain things (at time of 
 - [x] Elixir
 - [x] JavaScript
 - [x] TypeScript
-- [x] React
-- [ ] More coming soon
+- [x] React (JSX/TSX)
+- [x] Vue
+- [x] Go
+- [x] Rust
+- [x] Java
+- [x] PHP
+- [x] Dart
+- [x] GDScript (Godot)
 
 ## Installation
 
