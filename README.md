@@ -81,6 +81,7 @@ vim.keymap.set('n', 'gd', require('lookup').lookup_definition, { desc = 'Go to d
 ## TODO
 
 - [ ] Add support for more languages
+- [ ] Make g-w g-[ work even without tags
 - [ ] Ensure visual mode support
 - [ ] Add unit tests
 - [ ] Warn when LSP isn't available yet (it's really annoying that LSP/Neovim does not do this automatically)
